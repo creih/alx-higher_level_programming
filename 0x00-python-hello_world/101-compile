@@ -1,0 +1,11 @@
+#!/bin/bash
+if [ -z "$PYFILE" ]; then
+    echo "Error: PYFILE environment variable not set."
+    exit 1
+fi
+filename=$(basename -- "$PYFILE")
+extension="${filename##*.}"
+filename="${filename%.*}"
+python3 -m compileall "$PYFILE"
+mv "__pycache__/$filename.cpython-$(python3 -V | grep -oP '(?<=Python )\d+\.\d+').pyc" "$filename.pyc"
+rm -rf "__pycache__"
