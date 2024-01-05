@@ -2,6 +2,9 @@
 from sys import argv
 
 def main():
+    """
+    zzxc
+    """
     args = argv[1:]
     result = sum(map(int, args))
     print(result)
