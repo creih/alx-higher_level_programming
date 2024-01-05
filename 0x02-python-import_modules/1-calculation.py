@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-from calculator_1 import add, sub, mul, div
+from calculator_1 as c
 
 a = 10
 b = 5
 
-add_result = add(a, b)
-sub_result = sub(a, b)
-mul_result = mul(a, b)
-div_result = div(a, b)
+add_result = c.add(a, b)
+sub_result = c.sub(a, b)
+mul_result = c.mul(a, b)
+div_result = c.div(a, b)
 
 print("{:d} + {:d} = {:d}".format(a, b, add_result))
 print("{:d} - {:d} = {:d}".format(a, b, sub_result))
