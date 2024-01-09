@@ -6,7 +6,7 @@ def main():
     """
     zzxc
     """
-    args = argv[0:]
+    args = argv[1:]
     result = sum(map(int, args))
     print(result)
 
