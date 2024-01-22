@@ -4,5 +4,3 @@ def raise_exception_msg(message=""):
         print(message)
     except NameError:
         print(f"Name exception raised: {message}")
-    finally:
-        print("Inside finally block")
