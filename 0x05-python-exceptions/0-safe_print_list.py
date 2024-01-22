@@ -6,7 +6,7 @@ def safe_print_list(my_list=[], x=0):
             print(my_list[item], end='')
             bara += 1
     except (IndexError, ...):
-        print()
+        pass
     finally:
-        print("\n")
-        return bara
+        print()
+    return bara
