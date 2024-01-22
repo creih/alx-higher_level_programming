@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def raise_exception_msg(message=""):
     try:
-        undefined_variable
+        print(message)
     except NameError:
         print(f"Name exception raised: {message}")
     finally:
