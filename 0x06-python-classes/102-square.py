@@ -5,12 +5,12 @@
 class Square:
     """Class to define a square.
 
-    This class represents a square and includes a private instance attribute `size`.
-    It provides properties and setters for `size`, a method for area computation,
+    This class represents square includes private instance attribute `size`.
+    It provides properties and setters for `size`,for area computation,
     and supports comparators based on the square area.
 
     Attributes:
-        size (float or int): Private instance representing the size of the square.
+        size (float or int): Private instance of the size square.
 
     """
 
@@ -18,7 +18,7 @@ class Square:
         """Initializes a new Square instance with an optional size.
 
         Args:
-            size (float or int, optional): The size of the square. Defaults to 0.
+            size (float or int, optional): size Defaults to 0.
 
         Raises:
             TypeError: If size is not a number (float or integer).
