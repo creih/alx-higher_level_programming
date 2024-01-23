@@ -10,7 +10,7 @@ class Square:
     and supports comparators based on the square area.
 
     Attributes:
-        size (float or int): Private instance attribute representing the size of the square.
+        size (float or int): Private instance representing the size of the square.
 
     """
 
