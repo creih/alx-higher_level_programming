@@ -1,11 +1,6 @@
 #!/usr/bin/python3
 class Square:
-    """this is empty class of square"""
-    def __init__(self):
-        """this is the initialisation method.
-        Args:
-            self: for this
-        Return: NOne
-        Raises: None
-        """
-        pass
+    """this is empty class of square.
+    This is my empty square calss implem.
+    """
+    pass
