@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" this should handle all requirements of advanced task. """
+
+
 class Square:
     """Class to define a square.
 
