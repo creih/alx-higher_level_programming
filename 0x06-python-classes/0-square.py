@@ -1,7 +1,5 @@
 #!/usr/bin/python3
- """this is empty class of square.
-    This is my empty square calss implementation.
-    """
+"""this is empty class of square.This is my empty square."""
 
 
 class Square:
