@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+""" square class that sets the size of a square."""
 class Square:
     """Square class.
     this is diff from the one above by size.
