@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """this is the implementatin of adv task"""
+
+
 class Square:
     """Class to define a square.
 
     This class reps square and private instance attributes `size`, `position`.
-    It provides properties and setters for both attributes,methods for area 
+    It provides properties and setters for both attributes,methods for area
     and printing the square.
 
     Attributes:
@@ -71,7 +73,7 @@ class Square:
 
         """
         if not isinstance(value, tuple) or len(value) != 2 or \
-                not all(isinstance(coord, int) and coord >= 0 for coord in value):
+                not all(isinstance(crd, int) and crd >= 0 for crd in value):
             raise TypeError("position must be a tuple of 2 positive integers")
 
         self.__position = value
