@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-    """ this class with a private size field"""
+""" this class with a private size field"""
 class Square:
 """Class to define a square.
 class represents square and has private instance attribute `size`.
