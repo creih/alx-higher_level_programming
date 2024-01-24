@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-""" this class with a private size field"""
+""" this class square is with a private size field."""
 class Square:
 """Class to define a square.
 class represents square and has private instance attribute `size`.
 The size is validated during instantiation.
-Attributes:
-    size (int): Private instance attribute representing size of square.
-
 """
     def __init__(self, size=0):
         """Initializes a new Square instance with an optional size.
