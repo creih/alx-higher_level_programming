@@ -7,4 +7,4 @@ def safe_print_division(a, b):
     else:
         return subizo
     finally:
-        print("Inside result: {}".format(subizo))
+        print("Inside result: {:d}".format(subizo))
