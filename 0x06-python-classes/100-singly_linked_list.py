@@ -13,7 +13,7 @@ class Node:
 
     """
 
-    def __init__(self, data, next_node=None):
+    def __init__(self, data, n_node=None):
         """Initializes a new Node instance with data and optional next_node.
 
         Args:
@@ -25,7 +25,7 @@ class Node:
 
         """
         self.data = data
-        self.next_node = next_node
+        self.n_node = n_node
 
     @property
     def data(self):
@@ -51,7 +51,7 @@ class Node:
     @property
     def next_node(self):
         """Getter property for the next node in the linked list."""
-        return self.__next_node
+        return self.__n_node
 
     @next_node.setter
     def next_node(self, value):
@@ -67,9 +67,12 @@ class Node:
         if value is not None and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
 
-        self.__next_node = value
+        self.__n_node = value
+
 
 """this is for the singly linked list"""
+
+
 class SinglyLinkedList:
     """Class to define a singly linked list.
 
@@ -91,15 +94,15 @@ class SinglyLinkedList:
         new_node = Node(value)
 
         if self.head is None or self.head.data > value:
-            new_node.next_node = self.head
+            new_node.n_node = self.head
             self.head = new_node
         else:
             current = self.head
-            while current.next_node is not None and current.next_node.data < value:
-                current = current.next_node
+            while current.n_node is not None and current.n_node.data < value:
+                current = current.n_node
 
-            new_node.next_node = current.next_node
-            current.next_node = new_node
+            new_node.n_node = current.n_node
+            current.n_node = new_node
 
     def __str__(self):
         """Prints the entire list in stdout, one node number per line."""
