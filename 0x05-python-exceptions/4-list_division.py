@@ -4,13 +4,13 @@ def list_division(my_list_1, my_list_2, list_length):
 
     for i in range(list_length):
         try:
-            element_1 = my_list_1[i]
-            element_2 = my_list_2[i]
+            e1 = my_list_1[i]
+            e2 = my_list_2[i]
 
-            if type(element_1) not in (int, float) or type(element_2) not in (int, float):
+            if type(e1) not in (int, float) or type(e2) not in (int, float):
                     raise TypeError("wrong type")
 
-            result = element_1 / element_2
+            result = e1 / e2
 
         except TypeError as t_e:
             print(t_e)
