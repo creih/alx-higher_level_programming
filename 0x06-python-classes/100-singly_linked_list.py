@@ -110,5 +110,5 @@ class SinglyLinkedList:
         current = self.head
         while current:
             result += str(current.data) + "\n"
-            current = current.next_node
+            current = current.n_node
         return result.rstrip()
