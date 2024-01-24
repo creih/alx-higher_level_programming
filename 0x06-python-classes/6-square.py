@@ -5,13 +5,13 @@
 class Square:
     """Class to define a square.
 
-    This class represents a square and includes private instance attributes `size` and `position`.
-    It provides properties and setters for both attributes, as well as methods for area computation
-    and printing the square.
+    This class represents square includes private attributes size and position
+    It provides properties and setters for both attributes, as well as methods
+    for area computation and printing the square.
 
     Attributes:
-        size (int): Private instance attribute representing the size of the square.
-        position (tuple): Private instance attribute representing the position of the square.
+        size (int): Private instance attribute represent the size of square.
+        position (tuple): Private inst attrib represent position of square.
 
     """
 
@@ -20,11 +20,11 @@ class Square:
 
         Args:
             size (int, optional): The size of the square. Defaults to 0.
-            position (tuple, optional): The position of the square. Defaults to (0, 0).
+            position (tuple, optional):Position of square. Default to (0, 0)
 
         Raises:
-            TypeError: If size is not an integer or position is not a tuple of 2 positive integers.
-            ValueError: If size is less than 0 or position contains non-positive integers.
+            TypeError: If size isn't int or pos isn't tuple of 2 + ints.
+            ValueError: If size is less than 0 or position contains !+ ints
 
         """
         self.size = size
@@ -72,9 +72,10 @@ class Square:
             ValueError: If value contains non-positive integers.
 
         """
-        if not isinstance(value, tuple) or len(value) != 2 or \
-                not all(isinstance(coord, int) and coord >= 0 for coord in value):
-            raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value, tuple) or len(value) != 2:
+            raise TypeError("position must be a tuple of 2 pos ints")
+        if not all(isinstance(crd, int) and crd >= 0 for crd in value):
+            raise TypeError("position must be a tuple of 2 pos ints")
 
         self.__position = value
 
