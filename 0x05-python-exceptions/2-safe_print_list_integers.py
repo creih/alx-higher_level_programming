@@ -8,7 +8,7 @@ def safe_print_list_integers(my_list=[], x=0):
                 print("{:d}".format(value), end="")
                 bara += 1
     except IndexError as ie:
-        print(f"Error: {ie}")
+        print(f"Traceback (most recent call last):")
     except (ValueError, TypeError):
         pass
     finally:
