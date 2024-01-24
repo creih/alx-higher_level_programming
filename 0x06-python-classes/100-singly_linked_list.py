@@ -1,25 +1,27 @@
 #!/usr/bin/python3
 """this is for the actual task at hand"""
+
+
 class Node:
     """Class to define a node of a singly linked list.
 
-    This class represent node of private instance attribute `data` and `next_node`.
+    This class for node of private instance attribute data and next_node
 
     Attributes:
-        data (int): Private instance attribute representing the data of the node.
-        next_node (Node): Private instance for the next node in the linked list.
+        data (int): Private instance attribute representing the data of node
+        next_node (Node): Private instance for the next node in linked list.
 
     """
 
     def __init__(self, data, next_node=None):
-        """Initializes a new Node instance with data and an optional next_node.
+        """Initializes a new Node instance with data and optional next_node.
 
         Args:
             data (int): The data for the node.
             next_node : The next node in the linked list. Defaults to None.
 
         Raises:
-            TypeError: If data is not an integer or next_node is not a Node.
+            TypeError: If data is not an integer or next_node is not a Node
 
         """
         self.data = data
