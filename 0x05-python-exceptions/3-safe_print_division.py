@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 def safe_print_division(a, b):
-    subizo = 0
+    subiza = 0
     try:
-        subizo = a / b
+        subiza = a / b
     except (ZeroDivisionError, TypeError, ValueError):
-        return None
+        subiza = None
     finally:
-        print("Inside result: {}".format(subizo))
+        print("Inside result: {}".format(subiza))
+        return subiza
