@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """this class square is with a private size field and kinda not working."""
+
+
 class Square:
 """Class to define a square.
 class represents square and has private instance attribute `size`.
