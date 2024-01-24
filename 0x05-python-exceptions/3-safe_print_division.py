@@ -4,7 +4,5 @@ def safe_print_division(a, b):
         subizo = a / b
     except (ZeroDivisionError, TypeError):
         return None
-    else:
-        return subizo
     finally:
-        print("Inside result: {:d}".format(subizo))
+        print("Inside result: {}".format(subizo))
