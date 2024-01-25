@@ -2,4 +2,3 @@
 str = "Holberton School"
 print(f"{str*3}\n")
 print(str[:9])
-print("\n")
