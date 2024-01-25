@@ -8,11 +8,3 @@ extension="${filename##*.}"
 filename="${filename%.*}"
 mkdir -p "__pycache__"
 python3 -m compileall -b -x '__pycache__' "$PYFILE"
-compiled_file="__pycache__/$filename.cpython-$(python3 -V | grep -oP '(?<=Python )\d+\.\d+').pyc"
-if [ -e "$compiled_file" ]; then
-    mv "$compiled_file" "$filename.pyc"
-    echo "Compiling $PYFILE ..."
-else
-    echo "Error: Compiled file not found. Check the Python script and try again."
-    exit 0
-fi
