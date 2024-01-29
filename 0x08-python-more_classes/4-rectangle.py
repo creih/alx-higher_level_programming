@@ -7,8 +7,8 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         self._width = 0
         self._height = 0
-        self.width = width  # using the setter method to validate and set width
-        self.height = height  # using the setter method to validate and set height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
