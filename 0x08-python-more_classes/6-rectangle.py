@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-"""the file accomplishes task 6"""
+"""this is the task 6 file"""
 
 
 class Rectangle:
+    """this should do it nicely"""
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -35,21 +36,19 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
-        return 2 * (self.__width + self.__height)
+        return 0 if self.width == 0 or self.height == 0 else 2 * (self.width + self.height)
 
     def __str__(self):
-        result = ""
-        if self.__width > 0 and self.__height > 0:
-            for i in range(self.__height):
-                result += '#' * self.__width + '\n'
-        return result[:-1]
+        if self.width == 0 or self.height == 0:
+            return ""
+        return "\n".join(["#" * self.width] * self.height)
 
     def __repr__(self):
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
