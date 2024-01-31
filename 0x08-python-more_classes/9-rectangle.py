@@ -42,12 +42,16 @@ class Rectangle:
         return self._width * self._height
 
     def perimeter(self):
-        return 2 * (self._width + self._height) if self._width != 0 and self._height != 0 else 0
+        if self._width != 0 and self._height != 0:
+            return 2 * (self._width + self._height)
+        else:
+            return 0
 
     def __str__(self):
         if self._width == 0 or self._height == 0:
             return ""
-        return "\n".join([str(self.print_symbol) * self._width for _ in range(self._height)])
+        return "\n".join([
+            str(self.print_symbol) * self._width for _ in range(self._height)])
 
     def __repr__(self):
         return "Rectangle({}, {})".format(self._width, self._height)
@@ -62,7 +66,6 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        
         area_1 = rect_1.area()
         area_2 = rect_2.area()
 
