@@ -2,5 +2,12 @@
 import ../0-add_integer
 import unittest
 
->>>add_integer(5,2)
+>>> add_integer(5, 2)
+7
+>>> add_integer(3, 3.5)
+6
+>>> add_integer("abd", 4)
+Traceback (most recent call last):
+        ...
+TypeError: a must be an integer
 """
