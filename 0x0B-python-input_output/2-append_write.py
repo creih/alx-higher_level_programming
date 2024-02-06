@@ -8,4 +8,3 @@ def append_write(filename="", text=""):
         doc.write(text)
     doc.close()
     return len(text)
-    
