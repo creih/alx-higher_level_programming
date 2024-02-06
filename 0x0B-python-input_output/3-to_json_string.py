@@ -5,4 +5,5 @@ import json
 
 def to_json_string(my_obj):
     """this is the function to write text to file"""
-    json.dump(my_obj)
+    print(json.dumps(my_obj))
+    
