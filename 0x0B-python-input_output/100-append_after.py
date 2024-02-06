@@ -11,4 +11,3 @@ def append_after(filename="", search_string="", new_string=""):
                 lines.insert(i + 1, new_string + '\n')
         doc.seek(0)
         doc.writelines(lines)
-        append_after("example.txt", "specific string", "new line to insert")
