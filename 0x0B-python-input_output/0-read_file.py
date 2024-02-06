@@ -7,3 +7,4 @@ def read_file(filename=""):
     with open(filename, 'r', encoding='Utf-8') as doc:
         print(doc.read())
     doc.close()
+    
