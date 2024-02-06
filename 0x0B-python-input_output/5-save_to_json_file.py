@@ -5,6 +5,6 @@ import json
 
 def save_to_json_file(my_obj, filename):
     """this is the function to turn obj into json data"""
-    with open(filename, 'w', 'Utf-8') as file:
-        json.dump(my_obj, filename)
-    file.closed()
+    with open(filename, 'w', encoding='Utf-8') as file:
+        json.dump(my_obj, file)
+    file.close()
