@@ -5,6 +5,5 @@
 def read_file(filename=""):
     """this is the function to read text file and print it to the stdout"""
     with open(filename, 'r', encoding='Utf-8') as doc:
-        print(doc.read())
-    doc.close()
-    
+        print(doc.readlines())
+    doc.closed()
