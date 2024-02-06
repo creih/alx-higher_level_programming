@@ -5,4 +5,4 @@ import json
 
 def load_from_json_file(filename):
     with open(filename, 'r', encoding='Utf-8') as docs:
-            return json.loads(docs)
+        return json.loads(docs)
