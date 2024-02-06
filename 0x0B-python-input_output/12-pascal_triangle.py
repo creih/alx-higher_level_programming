@@ -10,15 +10,12 @@ def pascal_triangle(n):
 
     for i in range(n):
         row = []
-        
         for j in range(i + 1):
             if j == 0 or j == i:
                 element = 1
             else:
                 element = triangle[i - 1][j - 1] + triangle[i - 1][j]
             row.append(element)
-        
         triangle.append(row)
-    
     return triangle
 
