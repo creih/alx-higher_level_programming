@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """this is for the task 7 in 0x0B"""
-
-
 from save_to_json_file import save_to_json_file
 from load_from_json_file import load_from_json_file
 import sys
+
 
 while (True):
     arguments = sys.argv[1:]
