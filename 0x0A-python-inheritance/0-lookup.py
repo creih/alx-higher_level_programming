@@ -9,5 +9,5 @@ def lookup(obj):
     atts = dir(obj)
     for item in atts:
         if item.startswith("__"):
-            filtered_attributes_and_methods = item
+            filtered_attributes_and_methods = [item]
     return filtered_attributes_and_methods
