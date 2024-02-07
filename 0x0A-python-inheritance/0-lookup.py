@@ -10,4 +10,4 @@ def lookup(obj):
     for one in filt_attr:
         if not one.startswith("__"):
             filtered = one
-    return obj
+    return filtered
