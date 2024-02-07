@@ -1,4 +1,5 @@
 """this should be the test file"""
+import ../1-my_list.py
 # Test case 1: Create an empty MyList object
 my_list = MyList()
 
