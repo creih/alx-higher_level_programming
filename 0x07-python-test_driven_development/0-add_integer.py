@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-this file is for returning sum of 2 ints as task 0 
+this file is for returning sum of 2 ints as task 0
 required.
 """
 
