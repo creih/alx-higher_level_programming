@@ -85,6 +85,16 @@ class Rectangle(Base):
         """Return the dictionary representation of the Rectangle."""
         return {'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y': self.y}
 
+    def update(self, *args, **kwargs):
+        """Update the Rectangle attributes."""
+        if args:
+            attrs = ["id", "width", "height", "x", "y"]
+            for i, arg in enumerate(args):
+                setattr(self, attrs[i], arg)
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
     def __str__(self):
         """Return the string representation of the Rectangle."""
         sms = "[Rectangle] ({}) {}/{} - {}/{}"

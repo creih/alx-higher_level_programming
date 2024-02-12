@@ -1,1 +1,0 @@
-This will be the home repo for almost a circle project
