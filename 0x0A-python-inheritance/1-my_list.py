@@ -11,7 +11,5 @@ class MyList(list):
 
     def print_sorted(self):
         """THIS PRINTS the list"""
-        sorted_list = sorted(self)
-        for num in sorted_list:
-            if isinstance(num, int):
-                print("[{}]".format(num), end=", ")
+        sorted_list = sorted(list)
+        print(sorted_list)
