@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 """this is the file for my base tests."""
 import unittest
-from models.base import Base, Rectangle, Square
+from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
 class TestBase(unittest.TestCase):
-
     """this is the testcase class"""
+    
     def test_create_rectangle(self):
         """tests for rectangle initiation"""
         rectangle = Rectangle(10, 5)
