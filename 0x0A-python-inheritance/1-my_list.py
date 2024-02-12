@@ -14,4 +14,4 @@ class MyList(list):
         sorted_list = sorted(self)
         for num in sorted_list:
             if isinstance(num, int):
-                print("[{}]".format(num, end=", "))
+                print("[{}]".format(num), end=", ")
