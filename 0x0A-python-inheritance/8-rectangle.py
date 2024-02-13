@@ -2,10 +2,9 @@
 """
 this is the file for task 8 class
 """
-base_geom = __import__(7-base_geometry).BaseGeometry 
 
 
-class Rectangle(base_geom):
+class Rectangle:
     """
     this is the class for the rectangle class
 
