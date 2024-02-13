@@ -5,7 +5,7 @@ this is the file for task 8 class
 base_geom = __import__(7-base_geometry).BaseGeometry 
 
 
-class Rectangle(BaseGeometry):
+class Rectangle(base_geom):
     """
     this is the class for the rectangle class
 
