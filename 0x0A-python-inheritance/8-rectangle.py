@@ -6,7 +6,13 @@ base_geom = __import__(7-base_geometry).BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """this is the class for the rectangle class"""
+    """
+    this is the class for the rectangle class
+
+    Attributes:
+        __width (int): The width of the rectangle.
+        __height (int): The height of the rectangle.
+    """
     def __init__(self, width, height):
         """initialisation of Rectangle clas"""
         self.__width = width
