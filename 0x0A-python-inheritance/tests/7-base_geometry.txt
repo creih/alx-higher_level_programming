@@ -1,2 +1,6 @@
 """this is for testing the task 7"""
->>> base_geom = __import__()
+>>> base_geom = __import__(7.base_geometry)
+
+>>> base_geom.area()
+
+>>> base_geom.integer_validator()
