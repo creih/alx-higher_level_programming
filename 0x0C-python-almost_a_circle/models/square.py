@@ -8,7 +8,7 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """this method inherits all functionality from class Rectangle"""
-        super().__init__(size, size,x , y, id)
+        super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
@@ -29,7 +29,7 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """this is for updating the values of attributes"""
         if args:
-            attrs = ["id", "size", "x", "y",]
+            attrs = ["id", "size", "x", "y"]
             for i, arg in enumerate(args):
                 setattr(self, attrs[i], arg)
         elif kwargs:

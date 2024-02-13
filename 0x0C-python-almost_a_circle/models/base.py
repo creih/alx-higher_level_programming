@@ -15,7 +15,7 @@ class Base:
         if id is not None:
             self.id = id
         else:
-            Base.__nb_objects +=1
+            Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
     @staticmethod
@@ -25,16 +25,16 @@ class Base:
             return []
         else:
             return json.dumps(list_dictionaries)
-    
+
     @classmethod
-    def save_to_file(cls,list_objs):
+    def save_to_file(cls, list_objs):
         """this method right here will save json obj to a file"""
         if (list_objs is None):
             list_objs = []
             save_in_file = cls.__name__ + ".json"
             with open(save_in_file, 'w') as fil:
                 js = cls.to_json_string([o.to_dictionary() for o in list_objs])
-                fil.write(js) 
+                fil.write(js)
 
     @staticmethod
     def from_json_string(json_string):
@@ -65,7 +65,8 @@ class Base:
             with open(filename, 'r') as file:
                 json_string = file.read()
                 dictionaries = cls.from_json_string(json_string)
-                instances = [cls.create(**dictionary) for dictionary in dictionaries]
+                for dictionary in dictionaries:
+                    instances = cls.create(**dictionary)
                 return instances
         except FileNotFoundError:
             return []
@@ -76,11 +77,11 @@ class Base:
         filename = cls.__name__ + ".csv"
         with open(filename, 'w', newline='') as csvfile:
             writer = csv.writer(csvfile)
-            for obj in list_objs:
+            for o in list_objs:
                 if cls.__name__ == "Rectangle":
-                    writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+                    writer.writerow([o.id, o.width, o.height, o.x, o.y])
                 elif cls.__name__ == "Square":
-                    writer.writerow([obj.id, obj.size, obj.x, obj.y])
+                    writer.writerow([o.id, o.size, o.x, o.y])
 
     @classmethod
     def load_from_file_csv(cls):
