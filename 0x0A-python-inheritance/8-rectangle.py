@@ -4,7 +4,7 @@ this is the file for task 8 class
 """
 
 
-class Rectangle(BaseGeometry):
+class Rectangle:
     """
     this is the class for the rectangle class
 
