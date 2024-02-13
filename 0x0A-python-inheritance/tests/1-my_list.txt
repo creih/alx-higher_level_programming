@@ -1,10 +1,10 @@
 """this should be the test file"""
-import ../1-my_list.py
+>>> my_list = __import__(1-my_list.py)
 # Test case 1: Create an empty MyList object
 my_list = MyList()
 
 # Test case 2: Append integers to the MyList object
-my_list.append(5)
-my_list.append(3)
-my_list.append(8)
-my_list.append(1)
+>>> my_list.append(5)
+>>> my_list.append(3)
+>>> my_list.append(8)
+>>> my_list.append(1)

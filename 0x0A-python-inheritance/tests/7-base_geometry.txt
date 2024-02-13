@@ -1,0 +1,2 @@
+"""this is for testing the task 7"""
+>>> base_geom = __import__()
