@@ -8,8 +8,11 @@ class MyList(list):
     """
     thios is the required class for inheritting list
     """
+    def __init__(self):
+        """this is to initialise the MyList class"""
+        self.list = list
 
     def print_sorted(self):
         """THIS PRINTS the list"""
-        if (isinstance(self.list, int)):
-            return(sorted(self.list))
+        if (isinstance(list, int)):
+            return(sorted(list))
