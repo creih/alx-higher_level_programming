@@ -15,4 +15,4 @@ class MyList(list):
     def print_sorted(self):
         """THIS PRINTS the list"""
         if (isinstance(list, int)):
-            return(sorted(list))
+            print(sorted(list))
