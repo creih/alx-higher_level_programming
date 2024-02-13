@@ -9,12 +9,12 @@ Exception: area() is not implemented
 Traceback (most recent call last):
     ...
 TypeError: test must be an integer
->>> geometry.integer_validator("test", -1)
+>>> base_geom.integer_validator("test", -1)
 Traceback (most recent call last):
     ...
 ValueError: test must be greater than 0
->>> geometry.integer_validator("test", 0)
+>>> base_geom.integer_validator("test", 0)
 Traceback (most recent call last):
     ...
 ValueError: test must be greater than 0
->>> geometry.integer_validator("test", 10)
+>>> base_geom.integer_validator("test", 10)
