@@ -100,7 +100,11 @@ class Base:
                                         int(row[0])
                                         )
                     elif cls.__name__ == "Square":
-                        instance = cls(int(row[1]), int(row[2]), int(row[3]), int(row[0]))
+                        instance = cls(int(row[1]),
+                                        int(row[2]),
+                                        int(row[3]),
+                                        int(row[0])
+                                        )
                     instances.append(instance)
                 return instances
         except FileNotFoundError:
