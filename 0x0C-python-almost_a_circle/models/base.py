@@ -31,11 +31,10 @@ class Base:
         """this method right here will save json obj to a file"""
         if (list_objs is None):
             list_objs = []
-            save_in_file = cls.__name__ + ".json"
+            save_in_file = Base + ".json"
             with open(save_in_file, 'w') as fil:
                 js = cls.to_json_string([o.to_dictionary() for o in list_objs])
                 fil.write(js)
-            return fil
 
     @staticmethod
     def from_json_string(json_string):
