@@ -35,7 +35,7 @@ class Base:
             with open(save_in_file, 'w') as fil:
                 js = cls.to_json_string([o.to_dictionary() for o in list_objs])
                 fil.write(js)
-            return OK
+            return fil
 
     @staticmethod
     def from_json_string(json_string):
