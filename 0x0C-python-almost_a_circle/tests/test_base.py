@@ -1,36 +1,17 @@
 #!/usr/bin/python3
-"""this is the file for my base tests."""
-import unittest
-from ..models.base import Base
-from ..models.rectangle import Rectangle
-from ..models.square import Square
+"""this is the test for base class"""
 
+
+import unittest
+from models.base import Base
 
 class TestBase(unittest.TestCase):
-    """this is the testcase class"""
-    
-    def test_create_rectangle(self):
-        """tests for rectangle initiation"""
-        rectangle = Rectangle(10, 5)
-        self.assertIsInstance(rectangle, Rectangle)
-        self.assertIsInstance(rectangle, Base)
-
-    def test_create_square(self):
-        """tests for square initiation"""
-        square = Square(5)
-        self.assertIsInstance(square, Square)
-        self.assertIsInstance(square, Rectangle)
-        self.assertIsInstance(square, Base)
-
-    def test_area_rectangle(self):
-        """test the area calculation."""
-        rectangle = Rectangle(10, 5)
-        self.assertEqual(rectangle.area(), 50)
-
-    def test_area_square(self):
-        """ Test calculating area of a Square"""
-        square = Square(5)
-        self.assertEqual(square.area(), 25)
+    def test_auto_assign_id(self):
+        """Test if Base() assigns an ID automatically."""
+        obj1 = Base()
+        obj2 = Base()
+        self.assertEqual(obj1.id, 1)
+        self.assertEqual(obj2.id, 2)
 
 if __name__ == '__main__':
     unittest.main()
