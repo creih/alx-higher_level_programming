@@ -1,5 +1,5 @@
 """this is for testing the task 7"""
->>> base_geom = __import__(7.base_geometry).BaseGeometry
+>>> base_geom = __import__(7-base_geometry).BaseGeometry
 
 >>> base_geom.area()
 Traceback (most recent call last):

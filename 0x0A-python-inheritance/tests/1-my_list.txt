@@ -1,5 +1,5 @@
 """this should be the test file"""
->>> my_list = __import__(1-my_list.py)
+>>> my_list = __import__(1-my_list).MyList
 # Test case 1: Create an empty MyList object
 my_list = MyList()
 
