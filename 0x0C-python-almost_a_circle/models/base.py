@@ -93,14 +93,16 @@ class Base:
                 instances = []
                 for row in reader:
                     if cls.__name__ == "Rectangle":
-                        instance = cls(int(row[1]),
+                        instance = cls(
+                                int(row[1]),
                                 int(row[2]),
                                 int(row[3]),
                                 int(row[4]),
                                 int(row[0])
                                 )
                     elif cls.__name__ == "Square":
-                        instance = cls(int(row[1]),
+                        instance = cls(
+                                int(row[1]),
                                 int(row[2]),
                                 int(row[3]),
                                 int(row[0])
