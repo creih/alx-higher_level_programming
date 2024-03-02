@@ -23,8 +23,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """simply the return when obj called"""
-        sms = "[square] ({}) {}/{} - {}"
-        return sms.format(self.id, self.x, self.y, self.width)
+        sms = "[{}] ({}) {}/{} - {}"
+        return sms.format(self.__name__, self.id, self.x, self.y, self.width)
 
     def update(self, *args, **kwargs):
         """this is for updating the values of attributes"""
