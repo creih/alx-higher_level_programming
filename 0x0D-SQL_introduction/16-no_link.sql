@@ -1,3 +1,4 @@
 -- task 16 about
 -- write 2nd table recs
-SELECT score, name FROM hbtn_0c_0.second_table WHERE name IS NOT NULL ORDER BY score DESC;
+USE hbtn_0c_0;
+SELECT score, name FROM second_table WHERE name IS NOT NULL ORDER BY score DESC;
