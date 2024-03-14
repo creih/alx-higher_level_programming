@@ -1,3 +1,3 @@
 -- displaying all privileges of users
 -- nakoresheje show rats
-SHOW GRANT;S
+SHOW GRANTS FOR user_0d_1, user_0d_2;
