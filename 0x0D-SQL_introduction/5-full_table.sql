@@ -1,3 +1,3 @@
 -- task 5 about desc of a table in hbtn
 -- tas allas
-DESC first_table;
+SELECT * FROM user_tab_columns WHERE table_name = 'first_table' ORDER BY column_id;
