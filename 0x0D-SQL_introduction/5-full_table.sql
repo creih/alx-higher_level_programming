@@ -1,3 +1,4 @@
 -- task 5 about desc of a table in hbtn
--- tas allas
+-- not allowed to use desc or explain for tables
+USE hbtn_0c_0;
 SHOW COLUMNS FROM first_table;
