@@ -15,5 +15,5 @@ def print_square(size):
             for yhori in range(0, size):
                 print("#", end="")
             print()
-    else:
+    if not isinstance(size, int):
         raise TypeError("size must be an integer")
