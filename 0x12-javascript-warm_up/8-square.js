@@ -5,10 +5,10 @@ const ingano = parseInt(iya1);
 if (!isNaN(ingano)) {
   for (let i = 0; i < ingano; i++) {
     let row = '';
-	  for (let j = 0; j < ingano; j++) {
-	    row += 'X';
-	  }
-	  console.log(row);
+    for (let j = 0; j < ingano; j++) {
+      row += 'X';
+    }
+    console.log(row);
   }
 } else {
   console.log('Missing size');
