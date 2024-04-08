@@ -5,7 +5,7 @@ if (fArgs === 0)
 {
 	console.log('No argument');
 }
-else (fArgs === 1)
+else
 {
 	console.log(fArgs);
 }
