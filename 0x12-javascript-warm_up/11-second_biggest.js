@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const bare = parseInt(process.argv.slice(2).map(bare));
+const bare = parseInt(process.argv.slice(2).map(Number));
 
 bare.sort((a, b) => b- a);
 if (bare.length === 0 || bare.length === 1) {
