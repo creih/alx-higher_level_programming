@@ -3,9 +3,9 @@
 const fArgs = process.argv[2];
 if (fArgs === undefined)
 {
-	console.log('No argument');
+  console.log('No argument');
 }
 else
 {
-	console.log(fArgs);
+  console.log(fArgs);
 }
