@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// this is about if else nd else if.
+/* this is about if else nd else if. */
 const nArgs = process.argv.length - 2;
 if (nArgs === 0)
 {
@@ -7,7 +7,7 @@ if (nArgs === 0)
 }
 else if (nArgs === 1)
 {
-	console.log('Argument found')
+	console.log('Argument found');
 }
 else
 {
