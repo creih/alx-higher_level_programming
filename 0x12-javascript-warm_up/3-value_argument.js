@@ -1,7 +1,7 @@
 #!/usr/bin/node
 /* this is printing the first argument */
-let fArgs = process.argv.length - 1;
-if (fArgs === 0)
+const fArgs = process.argv[2];
+if (fArgs === undefined)
 {
 	console.log('No argument');
 }
