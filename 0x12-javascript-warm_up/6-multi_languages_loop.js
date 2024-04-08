@@ -5,8 +5,7 @@ const strArray = [
 'Python is cool',
 'JavaScript is amazing'
 ];
-while (strArray.length > i)
-{
+while (strArray.length > i) {
   console.log(strArray[i]);
   i++;
 }
