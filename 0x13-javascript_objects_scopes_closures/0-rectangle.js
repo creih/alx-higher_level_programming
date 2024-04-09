@@ -1,5 +1,3 @@
 #!/usr/bin/node
-// declaration of empty class
-export class Rectangle {
-}
-
+/*  empty class */
+class Rectangle {}
