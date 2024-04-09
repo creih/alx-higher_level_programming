@@ -12,8 +12,8 @@ class Rectangle {
     if (!this.width || !this.height) {
       console.log('');
     }
-    for (let i = 0; i < h; i++) {
-      for (let j = 0; j < w; j++) {
+    for (let i = 0; i < height; i++) {
+      for (let j = 0; j < width; j++) {
         console.log('X');
       }
     }
