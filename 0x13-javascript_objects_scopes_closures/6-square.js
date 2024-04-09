@@ -2,7 +2,7 @@
 const ojsq = require('./5-square');
 class Square extends ojsq {
   charPrint (c) {
-    if (isNaN(c)) {
+    if (c === undefined) {
       c = 'X';
     }
     for (let i = 0; i < this.height; i++) {
@@ -10,3 +10,4 @@ class Square extends ojsq {
     }
   }
 }
+module.exports = Square;
