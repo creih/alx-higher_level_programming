@@ -1,7 +1,7 @@
 #!/usr/bin/node
 class Rectangle {
   constructor (w, h) {
-    if (!Number.isIntger(w) || Number.isInteger(h) || w <= 0 || h <= 0) {
+    if (!Number.isIntger(w) || !Number.isInteger(h) || w <= 0 || h <= 0) {
       return {};
     }
     this.width = w;
