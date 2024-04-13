@@ -13,7 +13,7 @@ dtbs = sys.argv[3]
 
 dbcon = msq.connect(
         host="localhost",
-        port="3306",
+        port=3306,
         user=usrname,
         passwd=pswd,
         db=dtbs
