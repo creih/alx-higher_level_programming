@@ -19,7 +19,7 @@ dbcon = msq.connect(
         db=dtbs
         )
 cursor = dbcon.cursor()
-qr = "SELECT id, states FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
+qr = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
 cursor.execute(qr)
 states = cursor.fetchall()
 for state in states:
