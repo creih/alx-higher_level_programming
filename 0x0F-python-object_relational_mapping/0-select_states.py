@@ -18,9 +18,9 @@ dbcon = msq.connect(
         passwd=pswd,
         db=dtbs
         )
-curseur = dbcon.cursor()
-qr = "SELECT * FROM hbtn_0e_0_usa ORDER BY id ASC"
-curseur.execute(qr)
-states = curseur.fetchall()
+cursor = dbcon.cursor()
+qr = "SELECT * FROM states ORDER BY id ASC"
+cursor.execute(qr)
+states = cursor.fetchall()
 for state in states:
     print(state)
