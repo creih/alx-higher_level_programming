@@ -24,3 +24,5 @@ cursor.execute(qr)
 states = cursor.fetchall()
 for state in states:
     print(state)
+cursor.close()
+dbcon.close()
