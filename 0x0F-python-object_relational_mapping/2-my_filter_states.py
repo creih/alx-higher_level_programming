@@ -1,33 +1,38 @@
 #!/usr/bin/python3
 """
-this is task 0 mentioned in the README file
+this is a file for task nbr 2
 """
-import MySQLdb
 import sys
+import MySQLdb
 
-def search_states(username, password, database, name):
+def filter_states_by_name(username, password, database, state_name):
     """
-    this function is for making this whole thing unexecutable when imported
+    Connect to the MySQL server
     """
     db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
+
+    # Create a cursor object
     cursor = db.cursor()
+
+    # Execute the query to retrieve states matching the provided name
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    try:
-        cursor.execute(query, (name,))
-        results = cursor.fetchall()
-        for row in results:
-            print(row)
-    except MySQLdb.Error as e:
-        print("Error: unable to fetch data")
-        print("MySQL Error {}: {}".format(e.args[0], e.args[1]))
+    cursor.execute(query, (state_name,))
+
+    # Fetch all the rows
+    rows = cursor.fetchall()
+
+    # Display the results
+    for row in rows:
+        print(row)
+
+    # Close the cursor and database connection
     cursor.close()
     db.close()
+
 if __name__ == "__main__":
     if len(sys.argv) != 5:
         print("Usage: python script.py <username> <password> <database> <state_name>")
         sys.exit(1)
-     username = sys.argv[1]
-     password = sys.argv[2]
-     database = sys.argv[3]
-     name = sys.argv[4]
-     search_states(username, password, database, name)
+
+    username, password, database, state_name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+    filter_states_by_name(username, password, database, state_name)
