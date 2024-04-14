@@ -27,6 +27,3 @@ for state in states:
     print(state)
 cursor.close()
 dbcon.close()
-
-if __name__ == "__main__":
-    pass
