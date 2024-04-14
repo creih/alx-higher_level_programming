@@ -17,6 +17,7 @@ def filter_states_by_name(username, password, database, state_name):
     cursor.close()
     db.close()
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 5:
         print("Usage: python script.py <username> <password> <database> <state_name>")
