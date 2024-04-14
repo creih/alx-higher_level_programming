@@ -2,28 +2,29 @@
 """
 this is task 0 mentioned in the README file
 """
+import MySQLdb
 import sys
-import MySQLdb as msq
-if len(sys.argv) != 5:
-    print("Usage: python script.py <username> <password> <database>")
-    sys.exit(1)
-usrname = sys.argv[1]
-pswd = sys.argv[2]
-dtbs = sys.argv[3]
-data = sys.argv[4]
 
-dbcon = msq.connect(
-        host="localhost",
-        port=3306,
-        user=usrname,
-        passwd=pswd,
-        db=dtbs
-        )
-cursor = dbcon.cursor()
-qr = "SELECT * FROM states WHERE name=%s ORDER BY id ASC"
-cursor.execute(qr, (data,))
-states = cursor.fetchall()
-for state in states:
-    print(state)
-cursor.close()
-dbcon.close()
+def search_states(username, password, database, state_name):
+    db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
+    cursor = db.cursor()
+    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+    try:
+        cursor.execute(query, (state_name,))
+        results = cursor.fetchall()
+        for row in results:
+            print(row)
+    except MySQLdb.Error as e:
+        print("Error: unable to fetch data")
+        print("MySQL Error {}: {}".format(e.args[0], e.args[1]))
+    cursor.close()
+    db.close()
+if __name__ == "__main__":
+    if len(sys.argv) != 5:
+        print("Usage: python script.py <username> <password> <database> <state_name>")
+        sys.exit(1)
+     username = sys.argv[1]
+     password = sys.argv[2]
+     database = sys.argv[3]
+     state_name = sys.argv[4]
+     search_states(username, password, database, state_name)
