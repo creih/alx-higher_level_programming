@@ -5,7 +5,7 @@ this is task 0 mentioned in the README file
 import MySQLdb
 import sys
 
-def search_states(username, password, database, state_name):
+def search_states(username, password, database, name):
     """
     this function is for making this whole thing unexecutable when imported
     """
@@ -13,7 +13,7 @@ def search_states(username, password, database, state_name):
     cursor = db.cursor()
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
     try:
-        cursor.execute(query, (state_name,))
+        cursor.execute(query, (name,))
         results = cursor.fetchall()
         for row in results:
             print(row)
@@ -29,5 +29,5 @@ if __name__ == "__main__":
      username = sys.argv[1]
      password = sys.argv[2]
      database = sys.argv[3]
-     state_name = sys.argv[4]
-     search_states(username, password, database, state_name)
+     name = sys.argv[4]
+     search_states(username, password, database, name)
