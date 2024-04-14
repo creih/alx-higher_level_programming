@@ -20,10 +20,13 @@ dbcon = msq.connect(
         db=dtbs
         )
 cursor = dbcon.cursor()
-qr = "SELECT * FROM states WHERE name=data"
-cursor.execute(qr)
+qr = "SELECT * FROM states WHERE name=%s ORDER BY id ASC"
+cursor.execute(qr, (data,))
 states = cursor.fetchall()
 for state in states:
     print(state)
 cursor.close()
 dbcon.close()
+
+if __name__ = "__main__":
+    pass
