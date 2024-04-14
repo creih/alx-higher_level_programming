@@ -2,10 +2,10 @@
 """
 task model_state
 """
+import SQLAlchemy
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 
-# Define Base instance
 Base = declarative_base()
 
 class State(Base):
