@@ -4,7 +4,7 @@ this is task 0 mentioned in the README file
 """
 import sys
 import MySQLdb as msq
-if __name__ == "__main__":
+if __name__ != "__main__":
     if len(sys.argv) != 4:
         print("Usage: python script.py <username> <password> <database>")
         sys.exit(1)
