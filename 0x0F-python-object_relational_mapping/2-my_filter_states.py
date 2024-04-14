@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-this is a file for task nbr 2
+this file is for task nbr 2
 """
 import sys
 import MySQLdb
@@ -10,22 +10,12 @@ def filter_states_by_name(username, password, database, state_name):
     Connect to the MySQL server
     """
     db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
-
-    # Create a cursor object
     cursor = db.cursor()
-
-    # Execute the query to retrieve states matching the provided name
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
     cursor.execute(query, (state_name,))
-
-    # Fetch all the rows
     rows = cursor.fetchall()
-
-    # Display the results
     for row in rows:
         print(row)
-
-    # Close the cursor and database connection
     cursor.close()
     db.close()
 
