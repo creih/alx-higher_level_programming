@@ -12,9 +12,9 @@ def list_cities(username, password, database):
     cursor = db.cursor()
     query = "SELECT * FROM cities ORDER BY id ASC"
     cursor.execute(query)
-    rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    cities = cursor.fetchall()
+    for city in cities:
+        print(city)
     cursor.close()
     db.close()
 
