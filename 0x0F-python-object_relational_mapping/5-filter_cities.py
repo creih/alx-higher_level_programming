@@ -6,7 +6,12 @@ import sys
 import MySQLdb
 
 
-def list_cities_by_state(username, password, database, state_name):
+def list_cities_by_state(
+        username,
+        password,
+        database,
+        state_name
+        ):
     """Connect to the MySQL server and display cities"""
     db = MySQLdb.connect(
             host="localhost",
@@ -29,8 +34,11 @@ def list_cities_by_state(username, password, database, state_name):
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Usage: python script.py <username> <password> <database> <state_name>")
+        print("Usage: python script.py with 4 args")
         sys.exit(1)
 
-    username, password, database, state_name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+    username = sys.argv[1],
+    password = sys.argv[2],
+    database = sys.argv[3],
+    state_name = sys.argv[4]
     list_cities_by_state(username, password, database, state_name)
