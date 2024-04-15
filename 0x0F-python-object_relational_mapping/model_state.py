@@ -4,7 +4,8 @@ task model_state is about joining sql alchemy in our python codes
 """
 import SQLAlchemy
 from sqlalchemy import Column, Integer, String, create_engine
-from sqlalchemy.ext.declarative import declarative_base as Base
+from sqlalchemy.ext.declarative import declarative_base
+Base = declarative_base()
 
 
 class State(Base):
@@ -17,6 +18,6 @@ class State(Base):
     name = Column(String(128), nullable=False)
 
 
-eng = create_engine('mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa')
-
-Base.metadata.create_all(eng)
+conn = 'mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa'
+engine = create_engine(conn)
+Base.metadata.create_all(engine)
