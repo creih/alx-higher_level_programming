@@ -8,8 +8,13 @@ import MySQLdb
 
 def list_cities_by_state(username, password, database, state_name):
     """Connect to the MySQL server and display cities"""
-    db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
-
+    db = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=username,
+            passwd=password,
+            db=database
+            )
     cursor = db.cursor()
     query = "SELECT cities.name FROM cities \
              JOIN states ON cities.state_id = states.id \
@@ -20,6 +25,7 @@ def list_cities_by_state(username, password, database, state_name):
         print(row)
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
