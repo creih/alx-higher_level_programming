@@ -8,15 +8,19 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
+
 def list_states_with_letter_a(username, password, database):
-    """ Create the engine"""
-    engine = create_engine(f'mysql+mysqldb://{username}:{password}@localhost:3306/{database}')
+    """ Create the engine for sqlalchemy thingies"""
+    engine = create_engine(f'mysql+mysqldb://{username}:\
+            {password}@localhost:3306/{database}')
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
+    states = session.query(State).filter(State.name.like('\
+            %a%')).order_by(State.id)
     for state in states:
-        print(f"{state.id}: {state.name}")
+        print(state.id, state.name)
     session.close()
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
