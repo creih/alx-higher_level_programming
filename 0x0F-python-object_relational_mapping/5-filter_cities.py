@@ -27,7 +27,7 @@ def list_cities_by_state(
     cursor.execute(query, (state_name,))
     rows = cursor.fetchall()
     for row in rows:
-        print(row)
+        print(', '.join(row[0] for row in rows))
     cursor.close()
     db.close()
 
