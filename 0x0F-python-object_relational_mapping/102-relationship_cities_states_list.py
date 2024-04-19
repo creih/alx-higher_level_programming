@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Script to list all City objects from the db."""
+"""Script to list all City objects from the db
+and that is it."""
 import sqlalchemy
 import sys
 from sqlalchemy import create_engine
