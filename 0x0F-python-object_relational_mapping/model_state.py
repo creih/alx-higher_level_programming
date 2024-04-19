@@ -24,8 +24,3 @@ class State(Base):
             String(128),
             nullable=False
             )
-
-
-conn = 'mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa'
-engine = create_engine(conn)
-Base.metadata.create_all(engine)
