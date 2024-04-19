@@ -12,8 +12,7 @@ from model_state import Base, State
 def print_first_state(username, password, database):
     """Connect to the MySQL server and print the first State object."""
 
-    engine = create_engine(f'mysql://{username}:\
-            {password}@localhost:3306/{database}')
+    engine = create_engine(f'mysql://{username}:{password}@localhost:3306/{database}')
     Session = sessionmaker(bind=engine)
     session = Session()
 
