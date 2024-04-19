@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-"""Defines the City class."""
+"""
+Defines the City class of task 14.
+"""
 from sqlalchemy import Column, Integer, String, ForeignKey
 from model_state import Base
 
+
 class City(Base):
-    """Represents a city for a state."""
+    """
+    Represents a city for a state.
+    """
 
     __tablename__ = 'cities'
     id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
