@@ -6,6 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
     """Class representing a State."""
 
@@ -29,7 +30,6 @@ if __name__ == "__main__":
     new_state = State(name='New State')
     session.add(new_state)
     session.commit()
-
 
     states = session.query(State).all()
     for state in states:
