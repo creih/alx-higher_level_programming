@@ -2,9 +2,9 @@
 """
 Task 5: Display cities by state
 """
-
 import sys
 import MySQLdb
+
 
 def list_cities_by_state(username, password, database, state_name):
     """Connect to the MySQL server and display cities"""
@@ -25,6 +25,7 @@ def list_cities_by_state(username, password, database, state_name):
     print(cities)
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
