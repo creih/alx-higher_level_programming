@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""Script to list all City objects from the db
-and that is it."""
+"""
+Script to list all City objects from the db
+and that is it.
+"""
 import sqlalchemy
 import sys
 from sqlalchemy import create_engine
@@ -32,5 +34,4 @@ if __name__ == "__main__":
     password = sys.argv[2]
     database = sys.argv[3]
 
-    from relationship_state import Base, State, City
     list_cities(username, password, database)
