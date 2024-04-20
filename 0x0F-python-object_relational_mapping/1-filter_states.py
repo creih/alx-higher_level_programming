@@ -20,7 +20,7 @@ if __name__ == "__main__":
         db=dtbs
         )
     cursor = dbcon.cursor()
-    qr = "SELECT * FROM states WHERE name REGEXP '^[N]*' ORDER BY id ASC"
+    qr = "SELECT * FROM states WHERE name REGEXP '^N%' ORDER BY id ASC"
     cursor.execute(qr)
     states = cursor.fetchall()
     for state in states:
