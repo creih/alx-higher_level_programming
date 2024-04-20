@@ -23,7 +23,7 @@ def filter_states_by_name(username, password, database, state_name):
     cursor.execute(query)
     rows = cursor.fetchall()
     for row in rows:
-        print({}.format(row))
+        print(row)
     cursor.close()
     db.close()
 
