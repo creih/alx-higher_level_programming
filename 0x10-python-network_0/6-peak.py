@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ this file contains the python file for etting the peak in list of ints"""
+
+
 def find_peak(list_of_integers):
     """ this function is for peak detection"""
     if not list_of_integers:
