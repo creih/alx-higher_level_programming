@@ -18,10 +18,14 @@ if (error) {
       comp[task.userId]++;
     }
   });
+  sorti = '{ ';
   for (const userId in comp) {
     if (comp.hasOwnProperty(userId)) {
-      console.log(`User ${userId}: ${comp[userId]}`);
+      sorti += `\'${userId}\': ${comp[userId]},\n`;
     }
   }
+  sorti = sorti.slice(0, -2); 
+  sorti += ' }';
+	console.log(sorti);
 }
 });
